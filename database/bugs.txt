@@ -1,0 +1,4 @@
+> update pembelian by id and produk_id
+> update penjualan by id and produk_id
+> delete pembelian by id and produk_id
+> delete penjualan by id and produk_id

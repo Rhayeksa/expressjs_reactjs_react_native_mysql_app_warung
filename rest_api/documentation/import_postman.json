@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "0069fc4d-76b9-4822-a362-cf9f57c37b24",
+		"name": "hosting-room-meeting-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "addOneTrue",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjA4NjA5ODcxLCJleHAiOjE2MDg2OTYyNzF9.kjoV0OrrAMesKWadIrPLYI3_gDvQE2-cA0LGNS5xfwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "total_person",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "booking_time",
+									"value": "2020-12-16T07:40:05.000Z",
+									"type": "text"
+								},
+								{
+									"key": "noted",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "check_in_time",
+									"value": "2020-12-16T07:40:05.000Z",
+									"type": "text"
+								},
+								{
+									"key": "check_out_time",
+									"value": "2020-12-16T07:40:05.000Z",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "room_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rest-api-pendaftaran-room-m.herokuapp.com/bookings/addOne",
+							"protocol": "https",
+							"host": [
+								"rest-api-pendaftaran-room-m",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"bookings",
+								"addOne"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addOneFalse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "total_person",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "booking_time",
+									"value": "2020-12-16T07:40:05.000Z",
+									"type": "text"
+								},
+								{
+									"key": "noted",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "check_in_time",
+									"value": "2020-12-16T07:40:05.000Z",
+									"type": "text"
+								},
+								{
+									"key": "check_out_time",
+									"value": "2020-12-16T07:40:05.000Z",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "room_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/bookings/addOne",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"addOne"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "findAllAdmin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjA4NTQzNDIzLCJleHAiOjE2MDg2Mjk4MjN9.iRIQgMF9Z0OwZJjYT7lCqjRS1nv6WQmx5q1HTYOxILY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://rest-api-pendaftaran-room-m.herokuapp.com/rooms/viewsAdmin",
+							"protocol": "https",
+							"host": [
+								"rest-api-pendaftaran-room-m",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								"viewsAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllGuest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjA4NjA4NzA3LCJleHAiOjE2MDg2OTUxMDd9.oknEb4D40jTCNpm1So0cMG2rjUkW-trmv87XsT8if6M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://rest-api-pendaftaran-room-m.herokuapp.com/rooms/viewsGuest",
+							"protocol": "https",
+							"host": [
+								"rest-api-pendaftaran-room-m",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								"viewsGuest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addOne",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3d3a5cbd94dadc0320e7a391be2e391cd53340ee",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjA4NjA0MjU0LCJleHAiOjE2MDg2OTA2NTR9.Xa1ll1a8-YEaNTOZH8nw1az8Rq_pQBeHptpnwQdfPOg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "room_name",
+									"value": "room 1",
+									"contentType": "application/x-www-form-urlencoded",
+									"type": "text"
+								},
+								{
+									"key": "room_capacity",
+									"value": "100",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"contentType": "",
+									"type": "file",
+									"src": "/home/rhayeksa/Downloads/Telegram Desktop/github.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rest-api-pendaftaran-room-m.herokuapp.com/rooms/addOne",
+							"protocol": "https",
+							"host": [
+								"rest-api-pendaftaran-room-m",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"rooms",
+								"addOne"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "06e6be117b5ff0de21d6d0747e69b6023c91f5bd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "guest1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/rhayeksa/Downloads/Telegram Desktop/github.png"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rest-api-pendaftaran-room-m.herokuapp.com/auth/register",
+							"protocol": "https",
+							"host": [
+								"rest-api-pendaftaran-room-m",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginGuest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "guest1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rest-api-pendaftaran-room-m.herokuapp.com/auth/login",
+							"protocol": "https",
+							"host": [
+								"rest-api-pendaftaran-room-m",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rest-api-pendaftaran-room-m.herokuapp.com/auth/login",
+							"protocol": "https",
+							"host": [
+								"rest-api-pendaftaran-room-m",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

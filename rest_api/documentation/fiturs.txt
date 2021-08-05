@@ -1,0 +1,6 @@
+Admin
+> crud produk, pemasok, pembelian, penjualan
+> melihat dan print laporan keuntungan dan kerugian perbulan dan pertahun
+> malihat dan print laporan modal perbulan dan pertahun
+pelanggan
+> melihat produk
